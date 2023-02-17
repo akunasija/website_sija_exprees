@@ -58,7 +58,7 @@
 
         <li class="nav-item">
           <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-breakfast">
-            <h4>Belum Dibayar</h4>
+            <h4>Proses</h4>
           </a><!-- End tab nav item -->
 
         <li class="nav-item">
@@ -68,6 +68,7 @@
         </li><!-- End tab nav item -->
 
       </ul>
+
 
       <div class="tab-content why-us" data-aos="fade-up" data-aos-delay="300">
 
@@ -80,69 +81,54 @@
 
           <div class="row gy-5">
 
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-              <div class="why-box">
-                <h6><b>#Belanja #PQ98989891</b></h6>
-                <p align="right">(18 Januari 2023)</p>
-                <hr>
-                <table width="100%">
-                  <thead>
-                    <tr>
-                      <td>Status Pesanan:</td>
-                      <td align="right">Siap Diambil</td>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Status Pembayaran:</td>
-                      <td align="right">Dibayar</td>
-                    </tr>
-                    <tr>
-                      <td>Total Harga:</td>
-                      <td align="right">18.000</td>
-                    </tr>
-                    <tr>
-                      <td>Jumlah Barang:</td>
-                      <td align="right">3</td>
-                    </tr>
-                  </tbody>
-                  <thead>
-                    <tr>
-                      <td>Toko:</td>
-                      <td align="right">Toko Cina (+3 Toko Lainnya)</td>
-                  </thead>
-                </table>
-                <div class="text-center">
-                  <a href="detail_belanja.html" class="more-btn">Lihat Detail<i class="bx bx-chevron-right"></i></a>
+            <?php foreach ($pesanan as $pn) { ?>
+              <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="why-box">
+                  <h6><b>#Belanja #PQ9898989<?= $pn->kode_transaksi; ?></b></h6>
+                  <p align="right"><?= $pn->tanggal_transaksi; ?></p>
+                  <hr>
+                  <table width="100%">
+                    <thead>
+                      <tr>
+                        <td>Status Pesanan:</td>
+                        <td align="right"><?= $pn->status_pemesanan; ?></td>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Status Pembayaran:</td>
+                        <td align="right"><?= $pn->status_pembayaran; ?></td>
+                      </tr>
+                      <tr>
+                        <td>Total Harga:</td>
+                        <td align="right"><?= $pn->total_harga; ?></td>
+                      </tr>
+                      <tr>
+                        <td>Jumlah Barang:</td>
+                        <td align="right"><?= $pn->jumlah_menu; ?></td>
+                      </tr>
+                    </tbody>
+                    <thead>
+                      <tr>
+                        <td>Toko:</td>
+                        <td align="right">Toko Cina (+3 Toko Lainnya)</td>
+                    </thead>
+                  </table>
+                  <div class="text-center">
+                    <a href="detail_belanja" class="more-btn">Lihat Detail<i class="bx bx-chevron-right"></i></a>
+                  </div>
                 </div>
               </div>
-            </div><!-- End Why Box -->
+            <?php } ?>
+            <!-- End Why Box -->
 
-            <div class="col-lg-8 d-flex align-items-center">
+            <!--div class="col-lg-8 d-flex align-items-center">
               <div class="row gy-4">
-
-                <div class="col-xl-4" data-aos="fade-up" data-aos-delay="200">
-                  <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                    <i class="bi bi-clipboard-data"></i>
-                    <h4><b>#Belanja #39191929308</b></h4>
-                    <p>19 Januari 2023</p>
-                    <a href="#" class="btn btn-outline-danger" role="button" aria-pressed="true">Lihat Detail</a>
-                  </div>
-                </div><!-- End Icon Box -->
-
-                <div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
-                  <div class="icon-box d-flex flex-column justify-content-center align-items-center">
-                    <i class="bi bi-gem"></i>
-                    <h4><b>#Belanja #8787878654</b></h4>
-                    <p>4 Januari 2023</p>
-                    <a href="#" class="btn btn-outline-danger" role="button" aria-pressed="true">Lihat Detail</a>
-                  </div>
-                </div><!-- End Icon Box -->
 
                 <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
                   <div class="icon-box d-flex flex-column justify-content-center align-items-center">
                     <i class="bi bi-inboxes"></i>
-                    <h4> <b>#Belanja #7676768909</b></h4>
-                    <p>19 Desember 2022</p>
+                    <h4> <b>#Belanja #767676890<?= $pn->kode_transaksi; ?></b></h4>
+                    <p><?= $pn->tanggal_transaksi; ?></p>
                     <a href="#" class="btn btn-outline-danger" role="button" aria-pressed="true">Lihat Detail</a>
                   </div>
                 </div><!-- End Icon Box -->
@@ -152,6 +138,7 @@
 
           </div>
         </div><!-- End Starter Menu Content -->
+
 
         <div class="tab-pane fade" id="menu-breakfast">
 

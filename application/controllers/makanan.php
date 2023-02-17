@@ -22,8 +22,10 @@ class Makanan extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->model('Makanan_model');
+		$data['makanan'] = $this->Makanan_model->tampilmakanan();
 		$this->load->view('header');
-		$this->load->view('v_makanan');
+		$this->load->view('v_makanan', $data);
 	}
 	 
 }

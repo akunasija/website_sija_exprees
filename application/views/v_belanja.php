@@ -38,7 +38,7 @@
 
 <body>
 
-    
+
 
     <!-- ======= Chefs Section ======= -->
     <section id="chefs" class="chefs section-bg">
@@ -51,11 +51,11 @@
             </div>
 
             <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
-                <li class="nav-item" ;">
-                    <a class="nav-link active" href="detail_belanja.html" style="color: brown;">Detail Belanja</a>
+                <li class="nav-item" ;>
+                    <a class="nav-link active" href="detail_belanja" style="color: brown;">Detail Belanja</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="belanja.html" style="color: brown;">Daftar Belanja</a>
+                    <a class="nav-link active" href="belanja" style="color: brown;">Daftar Belanja</a>
                 </li>
             </ul>
             <br>
@@ -83,7 +83,7 @@
                                 </div>
                             </div>
                             <h6 class="card-text">total belanja</h6>
-                            <p class="card-text">RP.23.000</p> <a href="lacak.html" class="btn btn-secondary " tabindex="-1" role="button" aria-disabled="true" align="right">Lacak</a>
+                            <p class="card-text">RP.23.000</p> <a href="lacak" class="btn btn-secondary " tabindex="-1" role="button" aria-disabled="true" align="right">Lacak</a>
 
                         </div>
                     </div>

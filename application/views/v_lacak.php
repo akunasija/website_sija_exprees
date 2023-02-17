@@ -73,38 +73,6 @@ ul.timeline > li > isi {
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1> SIJA <span> EXPREES. </span></h1>
-      </a>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="toko.html">Toko</a></li>
-          <li class="dropdown"><a href="#"><span>Kategori</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="makanan.html">makanan</a></li>
-              <li><a href="minuman.html">minuman</a></li>
-            </ul>
-          </li>   
-          <li><a href="belanja.html">Kembali</a></li>
-        </ul>
-      </nav><!-- .navbar -->
-
-      <a class="btn-book-a-table" href="Login.html">Keluar</a>
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-
-
-    </div>
-  </header><!-- End Header -->
-
  
   <main id="main">
 

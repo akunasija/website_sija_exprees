@@ -22,7 +22,9 @@ class Minuman extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('header');
+		$this->load->model('Minuman_model');
+		$data['minuman'] = $this->Minuman_model->tampilminuman();
+		$this->load->view('header', $data);
 		$this->load->view('v_minuman');
 	}
 	 

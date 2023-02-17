@@ -86,7 +86,7 @@
           <br>
           <div class="d-flex flex-row bd-highlight mb-3">
             <div class="p-2 bd-highlight">
-              <p><a href="menu.html">
+              <p><a href="v_menu.php">
                 <i class="fa fa-arrow-circle-left" style="font-size:36px" s></i>
                 </a></p>
             </div>
@@ -145,7 +145,7 @@
 
    <!-- End Footer -->
 
-   <a class="btn btn-danger" id="btn-back-to-top" href="pesanan_saya.html" style="max-width:530px; margin-left: 500px">
+   <a class="btn btn-danger" id="btn-back-to-top" href="pesanan_saya" style="max-width:530px; margin-left: 500px">
     <i class="fa fa-list"></i> Pesan
     </a>
     <div id="preloader"></div>

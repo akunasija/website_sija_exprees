@@ -50,7 +50,7 @@
         <div class="row">
 <div class="col-md-3"></div>
 <div class="col-md-6">
-  <form action="menu.html" method="post" role="form" class="php-email-form p-3 p-md-4">
+  <form action="menu" method="post" role="form" class="php-email-form p-3 p-md-4">
     <div class="section-header">
           <h2>Login</h2>
           <p>SIJA <span>EXPREES</span></p>

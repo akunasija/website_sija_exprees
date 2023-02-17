@@ -22,7 +22,9 @@ class Menu extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('header');
+		$this->load->model('Menu_model');
+		$data['menu'] = $this->Menu_model->tampilmenu();
+		$this->load->view('header', $data);
 		$this->load->view('v_menu');
 	}
 	 

@@ -23,7 +23,9 @@ class Pesanan_Saya extends CI_Controller
 	 */
 	public function index()
 	{
-		$this->load->view('header');
+		$this->load->model('Pesanan_model');
+		$data['pesanan'] = $this->Pesanan_model->tampilpesanan();
+		$this->load->view('header', $data);
 		$this->load->view('v_pesanan_saya');
 	}
 }

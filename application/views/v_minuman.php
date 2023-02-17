@@ -62,23 +62,25 @@
            
             <div class="row gy-5">
 
+            <?php foreach ($minuman as $min) { ?>
+
               <!--Menu-->
               <div class="col-lg-4 menu-item">
-                <a href="assets/img/menu/esteh.jpg" class="glightbox"><img src="assets/img/menu/esteh.jpg" class="menu-img img-fluid" alt=""></a>
-                <h4>Es teh</h4>
+                <a href="assets/img/menu/esteh.jpg" class="glightbox"><img src="assets/img/menu/<?= $min->gambar_menu; ?>" class="menu-img img-fluid" alt=""></a>
+                <h4><?= $min->nama_menu; ?></h4>
                 <p class="ingredients">
-                 teh,air,gula
+                <?= $min->deskripsi_menu; ?>
                 </p>
                 <p class="price">
-                  Rp 3000
+                Rp. <?= number_format($min->harga_menu, 0); ?> 
                   <br>
                   <!-- Button trigger modal -->
-<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal7">
+<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal<?= $min->kode_menu; ?>">
   Tambah
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal<?= $min->kode_menu; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -86,13 +88,13 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <a href="assets/img/menu/esteh.jpg" class="glightbox"><img src="assets/img/menu/esteh.jpg" class="menu-img img-fluid" alt=""></a>
-        <h4>Es Teh</h4>
+        <a href="assets/img/menu/esteh.jpg" class="glightbox"><img src="assets/img/menu/<?= $min->gambar_menu; ?>" class="menu-img img-fluid" alt=""></a>
+        <h4><?= $min->nama_menu; ?></h4>
         <p class="ingredients">
-          teh,air,gula
+        <?= $min->deskripsi_menu; ?>
         </p>
         <p class="price">
-          Rp 3000
+        Rp. <?= number_format($min->harga_menu, 0); ?> 
           <div class="mb-3">
             <label for="message-text" class="col-form-label">Pesan:</label>
             <textarea class="form-control" id="message-text"></textarea>
@@ -108,240 +110,7 @@
 </div>
                
               </div> <!--end menu-->
-
-              <!--Menu-->
-              <div class="col-lg-4 menu-item">
-                <a href="assets/img/menu/air.jpg" class="glightbox"><img src="assets/img/menu/air.jpg" class="menu-img img-fluid" alt=""></a>
-                <h4>Air mineral</h4>
-                <p class="ingredients">
-                  air
-                </p>
-                <p class="price">
-                  Rp 3000
-                  <br>
-                  <!-- Button trigger modal -->
-<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal8">
-  Tambah
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Halaman pembelian</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <a href="assets/img/menu/air.jpg" class="glightbox"><img src="assets/img/menu/air.jpg" class="menu-img img-fluid" alt=""></a>
-        <h4>Air Mineral</h4>
-        <p class="ingredients">
-          air
-        </p>
-        <p class="price">
-          Rp 3000
-          <div class="mb-3">
-            <label for="message-text" class="col-form-label">Pesan:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-            <input type="number" value="1" min="0" max="10" step="1"/>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">batalkan pesanan</button>
-        <button type="button" class="btn btn-primary">pesan</button>
-      </div>
-    </div>
-  </div>
-</div>
-               
-              </div> <!--end menu-->
-
-              <!--Menu-->
-              <div class="col-lg-4 menu-item">
-                <a href="assets/img/menu/smoothies.jpg" class="glightbox"><img src="assets/img/menu/smoothies.jpg" class="menu-img img-fluid" alt=""></a>
-                <h4>Smoothies</h4>
-                <p class="ingredients">
-                  alpukat, pisang, mangga, dll.
-                </p>
-                <p class="price">
-                  Rp 5000
-                  <br>
-                  <!-- Button trigger modal -->
-<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal9">
-  Tambah
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Halaman pembelian</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <a href="assets/img/menu/smoothies.jpg" class="glightbox"><img src="assets/img/menu/smoothies.jpg" class="menu-img img-fluid" alt=""></a>
-        <h4>Smoothies</h4>
-        <p class="ingredients">
-          alpukat, pisang, mangga, dll.
-        </p>
-        <p class="price">
-          Rp 5000
-          <div class="mb-3">
-            <label for="message-text" class="col-form-label">Pesan:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-            <input type="number" value="1" min="0" max="10" step="1"/>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">batalkan pesanan</button>
-        <button type="button" class="btn btn-primary">pesan</button>
-      </div>
-    </div>
-  </div>
-</div>
-               
-              </div> <!--end menu-->
-                 <!--Menu-->
-                 <div class="col-lg-4 menu-item">
-                  <a href="assets/img/menu/boba.jpg" class="glightbox"><img src="assets/img/menu/boba.jpg" class="menu-img img-fluid" alt=""></a>
-          <h4>Boba</h4>
-          <p class="ingredients">
-            red velvet, choco milo, bubble gum
-          </p>
-          <p class="price">
-            Rp 8000
-                    <br>
-                    <!-- Button trigger modal -->
-  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModa20">
-    Tambah
-  </button>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModa20" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Halaman pembelian</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <a href="assets/img/menu/boba.jpg" class="glightbox"><img src="assets/img/menu/boba.jpg" class="menu-img img-fluid" alt=""></a>
-          <h4>Boba</h4>
-          <p class="ingredients">
-            Red Velvet, Choco Milo, Bubble Gum
-          </p>
-          <p class="price">
-            Rp 8000
-            <div class="mb-3">
-              <label for="message-text" class="col-form-label">Pesan:</label>
-              <textarea class="form-control" id="message-text"></textarea>
-            </div>
-              <input type="number" value="1" min="0" max="10" step="1"/>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">batalkan pesanan</button>
-          <button type="button" class="btn btn-primary">pesan</button>
-        </div>
-      </div>
-    </div>
-  </div>
-                 
-                </div> <!--end menu-->
-              
-                              <!--Menu-->
-                        <div class="col-lg-4 menu-item">
-                        <a href="assets/img/menu/jus.jpg" class="glightbox"><img src="assets/img/menu/jus.jpg" class="menu-img img-fluid" alt=""></a>
-                        <h4>Jus buah</h4>
-                        <p class="ingredients">
-                        jeruk, mangga, alpukat, dll
-                        </p>
-                        <p class="price">
-                          Rp 7000
-                                  <br>
-                                  <!-- Button trigger modal -->
-                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModa21">
-                  Tambah
-                </button>
-                
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModa21" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Halaman pembelian</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        <a href="assets/img/menu/jus.jpg" class="glightbox"><img src="assets/img/menu/jus.jpg" class="menu-img img-fluid" alt=""></a>
-                        <h4>Jus buah</h4>
-                        <p class="ingredients">
-                        jeruk, mangga, alpukat, dll
-                        </p>
-                        <p class="price">
-                          Rp 7000
-                          <div class="mb-3">
-                            <label for="message-text" class="col-form-label">Pesan:</label>
-                            <textarea class="form-control" id="message-text"></textarea>
-                          </div>
-                            <input type="number" value="1" min="0" max="10" step="1"/>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">batalkan pesanan</button>
-                        <button type="button" class="btn btn-primary">pesan</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                               
-                              </div> <!--end menu-->
-                              
-                                               <!--Menu-->
-                 <div class="col-lg-4 menu-item">
-          <a href="assets/img/menu/Milkshakes.jpg" class="glightbox"><img src="assets/img/menu/Milkshakes.jpg" class="menu-img img-fluid" alt=""></a>
-          <h4>Milk shakes</h4>
-          <p class="ingredients">
-            red velvet, choco milo, bubble gum
-          </p>
-          <p class="price">
-            Rp 8000
-                    <br>
-                    <!-- Button trigger modal -->
-  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModa22">
-    Tambah
-  </button>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModa22" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Halaman pembelian</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <a href="assets/img/menu/Milkshakes.jpg" class="glightbox"><img src="assets/img/menu/Milkshakes.jpg" class="menu-img img-fluid" alt=""></a>
-          <h4>Milk shakes</h4>
-          <p class="ingredients">
-            red velvet, choco milo, bubble gum
-          </p>
-          <p class="price">
-            Rp 8000
-            <div class="mb-3">
-              <label for="message-text" class="col-form-label">Pesan:</label>
-              <textarea class="form-control" id="message-text"></textarea>
-            </div>
-              <input type="number" value="1" min="0" max="10" step="1"/>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">batalkan pesanan</button>
-          <button type="button" class="btn btn-primary">pesan</button>
-        </div>
-      </div>
-    </div>
-  </div>
-                 
-                </div> <!--end menu-->
+              <?php } ?>
 
             </div>
           </div><!-- End Starter Menu Content -->

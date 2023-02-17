@@ -1,9 +1,10 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Toko extends CI_Controller {
+class Toko extends CI_Controller
+{
 
-	
+
 
 	/**
 	 * Index Page for this controller.
@@ -22,8 +23,10 @@ class Toko extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('header');
+		$this->load->model('Toko_model');
+		$this->load->model('Menu_model');
+		$data['toko'] = $this->Toko_model->tampiltoko();
+		$this->load->view('header', $data);
 		$this->load->view('v_toko');
 	}
-	 
 }
